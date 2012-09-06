@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB;
+	window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.mozIDBKeyRange;
+	function Application(){
+		this.db=null;
+	};
+	version="1.3";
+	Application.prototype.inicializar=function(){
+		var self=this;
+		var openRequest=indexedDB.open("GDG2Lima");
+		openRequest.onsuccess=function(e){
+			var db=e.target.result;
+			self.db=db;
+			if(db.version!=version){
+				var setVersionRequest=db.setVersion(version);
+					setVersionRequest.onsuccess=function(e){
+						var objectStore=db.createObjectStore("Asistentes",{keyPath: "Nombre"});
+						self.agregarDato();
+					};
+					setVersionRequest.onerror=function(e){
+
+					};
+			}
+			else{
+				self.agregarDato();
+				//console.log("tablas creadas");
+				self.read();
+
+			}
+		};
+		openRequest.onerror=function(e){
+			console.log("Buuuuu");
+		};
+	};
+	Application.prototype.agregarDato=function(){
+		var database=this.db;
+		var transaction=database.transaction(["Asistentes"],"readwrite");
+		var objectStore=transaction.objectStore("Asistentes");
+		var putRequest=objectStore.put({
+			"Nombre": Math.random()+"",
+			"Apellido": "Manrique"
+		});
+		putRequest.onsuccess=function(){
+			console.log("guardado");
+		}
+		putRequest.onerror=function(){
+			console.log("buuuu");
+		};
+
+	};
+	Application.prototype.read=function(){
+		var database=this.db;
+		var transaction=database.transaction(["Asistentes"],"readonly");
+		var objectStore=transaction.objectStore("Asistentes");
+		var keyRange=IDBKeyRange.bound("A", "N");
+		var cursorRequest=objectStore.openCursor(keyRange);
+		cursorRequest.onsuccess=function(e){
+			var result=e.target.result;
+			if(!!result==false){
+				console.log("No hay más datos");
+				return;
+			}
+			console.log(result.value);
+		};
+		cursorRequest.onerror=function(){
+			console.log("buuuu");
+		};
+	}
+	var application=new Application();
+	application.inicializar();
+	</script>
+</body>
+</html>

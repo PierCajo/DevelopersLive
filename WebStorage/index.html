@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" name="Campo1" placeholder="Nombre"  id="nombre">
+	<input type="text" name="Campo2" placeholder="Apellido" id="apellido">
+	<input type="text" name="Campo3" placeholder="Direccion" id="direccion">
+	<div>
+			<button id="guardar">Guardar</button>
+			<button id="eliminar">Eliminar</button>
+	</div>
+	<script type="text/javascript">
+	if("localStorage" in window){
+		
+
+
+
+
+		var nombre=document.getElementById('nombre');
+		var apellido=document.getElementById('apellido');
+		var direccion=document.getElementById('direccion');
+
+
+		nombre.value=localStorage["nombre"]==undefined?"":localStorage["nombre"];
+		apellido.value=localStorage["apellido"]==undefined?"":localStorage["apellido"];
+		direccion.value=localStorage["direccion"]==undefined?"":localStorage["direccion"];
+
+
+
+		var buttonGuardar=document.getElementById('guardar');
+		var buttonEliminar=document.getElementById("eliminar");
+		buttonGuardar.addEventListener("click",function(){
+			localStorage["nombre"]=nombre.value;
+			localStorage["apellido"]=apellido.value;
+			localStorage["direccion"]=direccion.value;
+		},false);
+		buttonEliminar.addEventListener("click", function(){
+			localStorage.clear();
+		},false);
+	}
+	else{
+		//Crear un texto que diga que no hay
+		console.log("No Hay");
+	}
+	</script>
+</body>
+</html>

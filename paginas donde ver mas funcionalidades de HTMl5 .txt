@@ -5,7 +5,7 @@ Evolution of the Web: http://www.evolutionoftheweb.com/
 
 
 -------------EJEMPLOS----------------
-Dropping Files in the Browser: 		http://jsfiddle.net/mmanrique/aMzEH/embedded/result/			Lanzar PickFiltering
+Dropping Files in the Browser: 		http://jsfiddle.net/mmanrique/aMzEH/embedded/result/			
 WebSound API 						http://jsfiddle.net/mmanrique/vynvu/embedded/result/			http://labs.dinahmoe.com/plink/				http://labs.dinahmoe.com/ToneCraft/		http://static.echonest.com/BeatDriver/ (Dubstep)
 Candy Rain (Canvas) 				http://jsfiddle.net/mmanrique/yLYKC/embedded/result/			http://mrdoob.com/142/Winning_Solitaire
 Input Via Mouse (canvas)			http://jsfiddle.net/mmanrique/AubvA/embedded/result/			
@@ -18,5 +18,5 @@ File System APi						http://www.htmlfivewow.com/demos/terminal/terminal.html
 
 
 
-Se fue al tacho WebSQL
+Se dejo de lado WebSQL
 http://www.w3.org/TR/webdatabase/

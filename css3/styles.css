@@ -35,25 +35,84 @@ div{
 }
 .numero3{
 	background-color: grey;
+    -webkit-transition: all 2s cubic-bezier(.93,.11,.58,.76);
+	-moz-transition: all 2s cubic-bezier(.93,.11,.58,.76);
+	-o-transition: all 2s cubic-bezier(.93,.11,.58,.76);
+	-ms-transition: all 2s cubic-bezier(.93,.11,.58,.76);
+	transition: all 2s cubic-bezier(.93,.11,.58,.76);
 }
+.numero3.clicked{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    
+}
+/*
+Here we begin with the Transformations
+*/
 .numero4{
 	background-color: orange;
+    -webkit-transform: scale(1.5,1);
+    -moz-transform: scale(1.5,1);
+    -ms-transform: scale(1.5,1);
+    -o-transform: scale(1.5,1);
+    transform: scale(1.5,1);
 }
 .numero5{
 	background-color: green;
+    -webkit-transform: rotate(30deg) ;
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
 }
 .numero6{
 	background-color: yellow;
+    -webkit-transform: translate(100px,20px) ;
+    -moz-transform: translate(100px,20px);
+    -ms-transform: translate(100px,20px);
+    -o-transform: translate(100px,20px);
+    transform: translate(100px,20px);
 }
 .numero7{
 	background-color: magenta;
+    -webkit-transition: all 1s cubic-bezier(.93,.11,.58,.76);
+	-moz-transition: all 1s cubic-bezier(.93,.11,.58,.76);
+	-o-transition: all 1s cubic-bezier(.93,.11,.58,.76);
+	-ms-transition: all 1s cubic-bezier(.93,.11,.58,.76);
+	transition: all 1s cubic-bezier(.93,.11,.58,.76);
+}
+.numero7.clicked{
+    -webkit-transform: rotate(720deg) ;
+    -moz-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    transform: rotate(720deg);
+    
 }
 .numero8{
-	background-color: 
+	background-color: pink;
+    -webkit-animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
 }
-.numero9{
-	background-color: 
+@-webkit-keyframes animacion8{
+    from{background-color: green;}
+    to{background-color: red;}
 }
-.numero0{
-	background-color: 
+.numero9 {
+    -webkit-transition: all 2s linear;
+    -webkit-animation: rotate 35s linear infinite;
+    
+}
+@-webkit-keyframes rotate{
+    0%{-webkit-transform: rotate(0deg);}
+    100%{-webkit-transform:rotate(720deg);}
+}
+.numero9.clicked{
+    -webkit-animation-duration: 0.1s;
+}
+
+.numero9 img{
+    border-radius: 100px;
+    width:200px;
+    height:200px;
 }

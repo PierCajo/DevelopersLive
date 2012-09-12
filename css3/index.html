@@ -3,11 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<link rel="stylesheet" href="styles.css">
-	<style type="text/css">
-
-
-	</style>
+	<link rel="stylesheet" href="styles.css"/>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,8 +18,18 @@
 		<div class="numero6">This is numero6 Div. You to see you can set content</div>
 		<div class="numero7">This is numero7 Div. You to see you can set content</div>
 		<div class="numero8">This is numero8 Div. You to see you can set content</div>
-		<div class="numero9">This is numero9 Div. You to see you can set content</div>
-		<div class="numero0">This is numero0 Div. You to see you can set content</div>
+		<div class="numero9">
+                <img src="chrome-logo.jpg" />
+        </div>
 	</section>
+    <script>
+        $('div').bind("click", function () {
+            $(this).toggleClass("clicked");
+        });
+        
+        $('.numero9')[0].addEventListener("webkitAnimationEnd", function () {
+            console.log("animation ended");
+        },false);
+        </script>
 </body>
 </html>

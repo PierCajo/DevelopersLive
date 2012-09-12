@@ -1,0 +1,59 @@
+div{
+	width: 200px;
+	height:200px;
+	margin: 10px 0px 10px 10px;
+	position: relative;
+	
+}
+.numero1{
+	background-color: red;
+	-webkit-transition: background-color 1.5s linear;
+	-moz-transition: background-color 1.5s linear;
+	-o-transition: background-color 1.5s linear;
+	-ms-transition: background-color 1.5s linear;
+	transition: background-color 1.5s linear;
+}
+
+.numero1:hover{
+	background-color: green;
+}
+.numero2{
+	margin: 0px;
+	positon:absolute;
+	left: 500px;
+	background-color: blue;
+	-webkit-transition: left 2s ease-in, background-color 2s linear;
+	-moz-transition: left 2s ease-in, background-color 2s linear;
+	-o-transition: left 2s ease-in, background-color 2s linear;
+	-ms-transition: left 2s ease-in, background-color 2s linear;
+	transition: left 2s ease-in, background-color 2s linear;
+}
+
+.numero2:hover{
+	left:0px;
+	background-color: red;
+}
+.numero3{
+	background-color: grey;
+}
+.numero4{
+	background-color: orange;
+}
+.numero5{
+	background-color: green;
+}
+.numero6{
+	background-color: yellow;
+}
+.numero7{
+	background-color: magenta;
+}
+.numero8{
+	background-color: 
+}
+.numero9{
+	background-color: 
+}
+.numero0{
+	background-color: 
+}

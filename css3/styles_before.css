@@ -1,0 +1,66 @@
+div{
+	width: 200px;
+	height:200px;
+	margin: 10px 0 10px 10px;
+	position: relative;
+	
+}
+.numero1{
+	background-color: red;
+	
+}
+
+.numero1:hover{
+	background-color: green;
+}
+.numero2{
+	margin: 0;
+	position:absolute;
+	left: 500px;
+	background-color: blue;
+}
+
+.numero2:hover{
+	left:0;
+	background-color: red;
+}
+.numero3{
+	background-color: rgb(80,80,80);
+}
+.numero3.clicked{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+}
+/*
+Here we begin with the Transformations
+*/
+.numero4{
+	background-color: orange;
+}
+.numero5{
+	background-color: green;
+}
+.numero6{
+	background-color: yellow;
+}
+.numero7{
+	background-color: magenta;
+}
+.numero7.clicked{
+    
+}
+.numero8{
+	background-color: pink;
+}
+
+.numero9 {
+    
+}
+.numero9.clicked{
+}
+
+.numero9 img{
+    width:200px;
+    height:200px;
+}

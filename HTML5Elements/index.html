@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	input:invalid{
+		border: 1px solid red;
+	}
+	input{
+		margin: 20px 0 0 0;
+	}
+
+	</style>
+</head>
+<body>
+	<div><h1>Markup</h1></div>
+	<header>
+		<hgroup>
+			<!--Here is where title might come-->
+		</hgroup>
+	</header>
+	<nav>
+		<!--A navigation bar o a navigation menu -->
+	</nav>
+	<section>
+		<article>
+			<header>
+				Article Header
+			</header>
+		</article>
+	</section>
+	<aside>
+		Like us on Facebook
+	</aside>
+	<footer>
+		<time datetime="2012-05-07">2012</time>
+	</footer>
+	<div>
+		<h1>Elementos</h1>
+	</div>
+	<video controls>
+		<source src="http://simpl.info/video/video/chrome.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'"></source>
+		<source src="http://simpl.info/video/video/chrome.ogv" type="video/ogg"></source>
+		<source src="http://simpl.info/video/video/chrome.webm" type="video/webm"></source>
+		<p>NO tienes soporte de Video</p>
+	</video>
+	<audio controls>
+		<source src="http://slides.html5rocks.com/src/rushus-modal_blues.mp3" type="audio/mpeg"></source>
+		<source src="http://slides.html5rocks.com/src/rushus-modal_blues.ogg" type="audio/ogg"></source>
+	</audio>
+	<div>
+		<input type="text" list="comidas">
+		<datalist id="comidas">
+			<option value="Aji de Galina"></option>
+			<option value="Arroz con pato"></option>
+			<option value="Papa a la Huancaina"></option>
+			<option value="Ceviche"></option>
+			<option value="Causa Rellena"></option>
+			<option value="Pato a la naranja"></option>
+		</datalist>
+	</div>
+	<div>
+		<details>
+			<summary>Super Secreto</summary>
+			Te dije que era super secreto, ahora tener que volverlo a hacer
+		</details>
+	</div>
+	<div>
+		<ul style="list-style: none;">
+			<li>18:<meter value="18" max="20" hight="11" optimun="20" low="10" min="0" max="20"></meter></li>
+			<li>9: <meter value="9" max="20" hight="11" optimun="20" low="10" min="0" max="20"></meter></li>
+			<li>20:<meter value="20" max="20" hight="11" optimun="20" low="10" min="0" max="20"></meter></li>
+			<li>1:<meter value="1" max="20" hight="11" optimun="20" low="10" min="0" max="20"></meter></li>
+		</ul>
+	</div>
+	<div>
+		<progress value="20" max="100" id="progress"></progress>
+		<button id="go">Arranca</button>
+		<script type="text/javascript">
+		var progress=document.getElementById("progress");
+		var increase=function(){
+			if(progress.value<progress.max){
+				progress.value+=1;
+				setTimeout("increase()",100);
+			}
+			else{
+				alert("Trabajo Terminado")
+			}
+		}
+		document.getElementById('go').addEventListener("click",increase,false)
+		</script>
+	</div>
+	<div>
+		<h1>Nuevos Elementos de Input</h1>
+	</div>
+	<ul style="list-style:none">
+		<li>
+			<input type="text" required />
+		</li>
+		<li>
+			<input type="email" value="manuelmanrique@gmail.com" />
+		</li>
+		<li>
+			<input type="date" min="1989-07-28" max="2012-12-21" value="2012-09-19"/>
+		</li>
+		<li>
+			<input type="range" min="0" max="50" value="1" />
+		</li>
+		<li>
+			<input type="search" results="10" placeholder="Buscar" />
+		</li>
+		<li>
+			<input type="color" placeholder="e.g. #F2F2F2" />
+		</li>
+		<li>
+			<input type="number" step="1" min="-99" max="99" value="12" />
+		</li>
+	</ul>
+	<div>
+		<h1>MicroData</h1>
+	</div>
+	<div>
+		<h2>Sin MicroData</h2>
+		<div>
+			<ul>
+				<li>
+					<span>La Cuidad y los Perros</span>
+				</li>
+				<li>
+					<span>Director : Francisco José Lombardi</span>
+				</li>
+				<li>
+					<span>Autor: Mario Vargas Llosa</span>
+				</li>
+				<li>
+					<span>Duracion: 120 minutos</span>
+				</li>
+				<li>
+					<span>Descripcion: Lorem Ipsum</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<h2>Con MicroData</h2>
+		<ul itemscope="http://schema.org/Movie">
+			<li>
+				<span itemprop="name">La Cuidad y los Perros</span>	
+			</li>
+			<li>
+				<span>Director : <span itemprop="director">Francisco José Lombardi</span></span>
+			</li>
+			<li>
+				<span>Autor: <span itemprop="creator">Mario Vargas Llosa</span></span>
+			</li>
+			<li>
+				<span>Duracion: 120 minutos</span>
+			</li>
+			<li>
+				<span>Descripcion: <span itemprop="about">Lorem Ipsum</span></span>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

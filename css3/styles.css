@@ -1,7 +1,7 @@
 div{
 	width: 200px;
 	height:200px;
-	margin: 10px 0px 10px 10px;
+	margin: 10px 0 10px 10px;
 	position: relative;
 	
 }
@@ -18,8 +18,8 @@ div{
 	background-color: green;
 }
 .numero2{
-	margin: 0px;
-	positon:absolute;
+	margin: 0;
+	position:absolute;
 	left: 500px;
 	background-color: blue;
 	-webkit-transition: left 2s ease-in, background-color 2s linear;
@@ -30,11 +30,11 @@ div{
 }
 
 .numero2:hover{
-	left:0px;
+	left:0;
 	background-color: red;
 }
 .numero3{
-	background-color: grey;
+	background-color: rgb(80,80,80);
     -webkit-transition: all 2s cubic-bezier(.93,.11,.58,.76);
 	-moz-transition: all 2s cubic-bezier(.93,.11,.58,.76);
 	-o-transition: all 2s cubic-bezier(.93,.11,.58,.76);
@@ -92,7 +92,11 @@ Here we begin with the Transformations
 }
 .numero8{
 	background-color: pink;
-    -webkit-animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
+	-webkit-animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
+	-moz-animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
+	-ms-animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
+	-o-animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
+	animation: animacion8 2s cubic-bezier(.93,.11,.58,.76) alternate infinite;
 }
 @-webkit-keyframes animacion8{
     from{background-color: green;}
@@ -100,15 +104,35 @@ Here we begin with the Transformations
 }
 .numero9 {
     -webkit-transition: all 2s linear;
-    -webkit-animation: rotate 35s linear infinite;
+	-moz-transition: all 2s linear;
+	-o-transition: all 2s linear;
+	-ms-transition: all 2s linear;
+	transition: all 2s linear;
+	-webkit-animation: rotate 35s linear infinite;
+	-moz-animation: rotate 35s linear infinite;
+	-ms-animation: rotate 35s linear infinite;
+	-o-animation: rotate 35s linear infinite;
+	animation: rotate 35s linear infinite;
     
 }
 @-webkit-keyframes rotate{
-    0%{-webkit-transform: rotate(0deg);}
-    100%{-webkit-transform:rotate(720deg);}
+    0%{-webkit-transform: rotate(0deg);
+    	-moz-transform: rotate(0deg);
+    	-o-transform: rotate(0deg);
+    	-ms-transform: rotate(0deg);
+    	transform: rotate(0deg);}
+    100%{-webkit-transform:rotate(720deg);
+    	-moz-transform:rotate(720deg);
+    	-o-transform:rotate(720deg);
+    	-ms-transform:rotate(720deg);
+    	transform:rotate(720deg);}
 }
 .numero9.clicked{
     -webkit-animation-duration: 0.1s;
+    -moz-animation-duration: 0.1s;
+    -ms-animation-duration: 0.1s;
+    -o-animation-duration: 0.1s;
+    animation-duration: 0.1s;
 }
 
 .numero9 img{
